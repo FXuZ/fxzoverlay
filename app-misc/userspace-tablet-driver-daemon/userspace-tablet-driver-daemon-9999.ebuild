@@ -21,7 +21,6 @@ DEPEND="
 	${RDEPEND}
 "
 
-# PATCHES=("${FILESDIR}"/01-cmakefix.patch)
 
 src_prepare() {
 	cmake_src_prepare
@@ -39,9 +38,8 @@ src_compile() {
 }
 src_install() {
 	cmake_src_install
+	newinitd "${FILESDIR}"/userspace-tablet-driver-daemon userspace-tablet-driver-daemon
+	# upstream has disabled root access to this daemon
+	systemd_douserunit "${FILESDIR}"/userspace-tablet-driver-daemon.service
 }
 
-src_install_all() {
-	newinitd "${FILESDIR}"/userspace-tablet-driver-daemon userspace-tablet-driver-daemon
-	systemd_dounit "${FILESDIR}"/userspace-tablet-driver-daemon.service
-}

@@ -40,6 +40,7 @@ src_compile() {
 src_install() {
 	cmake_src_install
 	newinitd "${FILESDIR}"/userspace-tablet-driver-daemon userspace-tablet-driver-daemon
+	# upstream has disabled root access to this daemon
 	systemd_douserunit "${FILESDIR}"/userspace-tablet-driver-daemon.service
 }
 
