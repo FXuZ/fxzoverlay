@@ -1,0 +1,9 @@
+[Unit]
+Description=Daemon for driving non-wacom tablets from userspace
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/userspace-tablet-driver-daemon
+
+[Install]
+WantedBy=multi-user.target
