@@ -21,10 +21,10 @@ DEPEND="
 "
 S="${WORKDIR}/${PN}-${PV}"
 
-# PATCHES=("${FILESDIR}"/01-cmakefix.patch)
+PATCHES=("${FILESDIR}"/v${PV}-01-cmakefix.patch)
 
 src_prepare() {
-	default
+	# default
 	cmake_src_prepare
 }
 
