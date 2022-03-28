@@ -24,7 +24,6 @@ S="${WORKDIR}/${PN}-${PV}"
 PATCHES=("${FILESDIR}"/v${PV}-01-cmakefix.patch)
 
 src_prepare() {
-	# default
 	cmake_src_prepare
 }
 
@@ -44,5 +43,5 @@ src_install() {
 
 src_install_all() {
 	newinitd "${FILESDIR}"/userspace-tablet-driver-daemon userspace-tablet-driver-daemon
-	systemd_dounit "${FILESDIR}"/userspace-tablet-driver-daemon.service
+	systemd_douserunit "${FILESDIR}"/userspace-tablet-driver-daemon.service
 }
