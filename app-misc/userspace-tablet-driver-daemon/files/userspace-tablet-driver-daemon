@@ -1,5 +1,5 @@
 #!/usr/bin/openrc-run
-command="/usr/bin/userspace-tablet-driver-daemon"
+command="/usr/bin/userspace_tablet_driver_daemon"
 command_args=""
 pidfile=/var/run/userspace-tablet-driver-daemon.pid
 despcription="Daemon for driving non-wacom tablets from userspace"

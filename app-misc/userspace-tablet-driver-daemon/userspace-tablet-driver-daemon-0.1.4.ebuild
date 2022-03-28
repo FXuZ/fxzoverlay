@@ -39,9 +39,7 @@ src_compile() {
 }
 src_install() {
 	cmake_src_install
-}
-
-src_install_all() {
 	newinitd "${FILESDIR}"/userspace-tablet-driver-daemon userspace-tablet-driver-daemon
 	systemd_douserunit "${FILESDIR}"/userspace-tablet-driver-daemon.service
 }
+
