@@ -6,4 +6,4 @@ Type=simple
 ExecStart=/usr/bin/userspace_tablet_driver_daemon
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
